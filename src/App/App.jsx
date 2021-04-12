@@ -11,7 +11,7 @@ export class App extends React.Component {
     // Create initial state
     // - result -> used in the Display component
     // - input -> History of values given by the user -> numbers and operations
-    this.state = { result: "", input: [] };
+    this.state = { result: "0", input: [] };
 
     // Binds event handlers so when user click handlers are called with the correct `this` context
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -38,7 +38,7 @@ export class App extends React.Component {
   // - resets result to an empty string
   // - input to an empty array
   handleReset() {
-    this.setState({ result: "", input: [] });
+    this.setState({ result: "0", input: [] });
   }
 
   // Handles typed numbers -> joining them until the user press a operator sinal
