@@ -1,5 +1,4 @@
 import React from "react";
-import { Wrapper } from "../components/Wrapper";
 import { Display } from "../components/Display";
 import { Buttons } from "../components/Buttons";
 import "./style.scss";
@@ -71,7 +70,7 @@ export class App extends React.Component {
   //Handles the conditions of each typed button to choose how it will be processed
   handleButtonClick(action) {
     const lastInput = this.getLastInputEl();
-    const isOperator =
+    const isLastInputOperator =
       lastInput === "*" ||
       lastInput === "/" ||
       lastInput === "+" ||
@@ -90,23 +89,23 @@ export class App extends React.Component {
     }
 
     if (action.type === "number") {
-      if (!isOperator) {
-        this.handleNumber(action);
-      } else if (isOperator) {
+      if (isLastInputOperator) {
         this.pushInputEl(action);
+      } else {
+        this.handleNumber(action);
       }
       return;
     }
 
     if (action.type === "operation") {
-      if (lastInput !== isOperator) {
+      if (!isLastInputOperator) {
         this.pushInputEl(action);
       }
       return;
     }
 
     if (action.type === "dot") {
-      if (!isOperator && !lastInput.includes(".")) {
+      if (!isLastInputOperator && !lastInput.includes(".")) {
         this.handleNumber(action);
       }
       return;
@@ -122,10 +121,12 @@ export class App extends React.Component {
 
   render() {
     return (
-      <Wrapper>
-        <Display value={this.state.result} />
-        <Buttons onButtonClick={this.handleButtonClick} />
-      </Wrapper>
+      <div className="calculator-wrapper">
+        <div className="calculator">
+          <Display value={this.state.result} />
+          <Buttons onButtonClick={this.handleButtonClick} />
+        </div>
+      </div>
     );
   }
 }

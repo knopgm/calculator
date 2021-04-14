@@ -76,10 +76,10 @@ export function Buttons(props) {
       <button className="button button-ac" onClick={handleReset}>
         AC
       </button>
-      <button className="button" onClick={handleOperationDiv}>
+      <button className="button button-op-color" onClick={handleOperationDiv}>
         /
       </button>
-      <button className="button" onClick={handleOperationMul}>
+      <button className="button button-op-color" onClick={handleOperationMul}>
         x
       </button>
       <button className="button" onClick={handleNumberSeven}>
@@ -91,7 +91,7 @@ export function Buttons(props) {
       <button className="button" onClick={handleNumberNine}>
         9
       </button>
-      <button className="button" onClick={handleOperationMin}>
+      <button className="button button-op-color" onClick={handleOperationMin}>
         -
       </button>
       <button className="button" onClick={handleNumberFour}>
@@ -103,7 +103,7 @@ export function Buttons(props) {
       <button className="button" onClick={handleNumberSix}>
         6
       </button>
-      <button className="button" onClick={handleOperationAdd}>
+      <button className="button button-op-color" onClick={handleOperationAdd}>
         +
       </button>
       <button className="button" onClick={handleNumberOne}>
