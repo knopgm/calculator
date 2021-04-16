@@ -1,6 +1,8 @@
 import React from "react";
 import { Display } from "../components/Display";
 import { Buttons } from "../components/Buttons";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import "./style.scss";
 
 export class App extends React.Component {
@@ -122,9 +124,13 @@ export class App extends React.Component {
   render() {
     return (
       <div className="calculator-wrapper">
-        <div className="calculator">
-          <Display value={this.state.result} />
-          <Buttons onButtonClick={this.handleButtonClick} />
+        <div>
+          <Header />
+          <div className="calculator">
+            <Display value={this.state.result} />
+            <Buttons onButtonClick={this.handleButtonClick} />
+          </div>
+          <Footer />
         </div>
       </div>
     );
