@@ -1,7 +1,6 @@
 .buttons-grid {
   background: #2a2d36;
   border-radius: 24px;
-  //margin: 10px 0px;
   padding: 24px 16px;
   display: grid;
   grid-template-rows: auto;
@@ -25,27 +24,27 @@
   color: white;
   border: none;
   border-radius: 16px;
+
   &:focus {
     outline: none;
-    //box-shadow: none;
   }
-}
 
-.button-ac {
-  color: #26f9d4;
-  grid-area: AC;
-}
+  &--reset {
+    color: #26f9d4;
+    grid-area: AC;
+  }
 
-.button-zero {
-  grid-area: Z;
-}
+  &--zero {
+    grid-area: Z;
+  }
 
-.button-equal {
-  color: #26f9d4;
-  grid-area: EQ;
-  height: 100%;
-}
+  &--equal {
+    color: #26f9d4;
+    grid-area: EQ;
+    height: 100%;
+  }
 
-.button-op-color {
-  color: #f37b7b;
+  &--operation {
+    color: #f37b7b;
+  }
 }
