@@ -125,7 +125,7 @@ export class App extends React.Component {
     return (
       <div className="calculator-wrapper">
         <div>
-          <Header />
+          <Header title="Calculator" />
           <div className="calculator">
             <Display value={this.state.result} />
             <Buttons onButtonClick={this.handleButtonClick} />
