@@ -29,6 +29,14 @@
     outline: none;
   }
 
+  &:hover {
+    box-shadow: 0 0 0px 2px rgb(255 255 255 / 25%);
+  }
+
+  &:active {
+    background: #181a1f;
+  }
+
   &--reset {
     color: #26f9d4;
     grid-area: AC;
